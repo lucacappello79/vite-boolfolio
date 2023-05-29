@@ -51,7 +51,7 @@ export default {
 
 <template>
   <div class="container pt-5">
-    <h1>My projects</h1>
+    <h1 class="text-center my-5">My projects</h1>
 
     <!-- <table class="table table-striped">
       <thead>
