@@ -28,8 +28,8 @@ export default {
             axios.get('http://127.0.0.1:8000/api/projects?page=' + this.currentPage).then(response => {
                 //axios.get('http://127.0.0.1:8000/api/projects').then(response => {
 
-                // this.projects = response.data.results;
-                this.projects = response.data.results.data;
+                this.projects = response.data.results;
+                // this.projects = response.data.results.data;
 
             });
 
@@ -41,32 +41,32 @@ export default {
 </script>
 
 <template>
-    <div class="container py-5">
+    <div class="container py-3">
 
-        <!-- <div v-if="projects.length > 0" class="container pt-5">
-            <h1>My Projects2</h1>
+        <div v-if="projects.length > 0" class="container pt-5">
+            <h1 class="text-center mb-5">My Projects Test</h1>
             <hr>
             <div class="row">
                 <div v-for="item in projects" class="col-4 mb-5">
                     <ProjectCard :project="item"></ProjectCard>
                 </div>
             </div>
-        </div> -->
+        </div>
 
-        <!-- <div v-else class="loading-screen">
+        <div v-else class="loading-screen">
             <div class="spinner-border" role="status">
                 <span class="visually-hidden">Loading...</span>
             </div>
-        </div> -->
+        </div>
 
 
-        <h1>My Projects2</h1>
+        <!-- <h1>My Projects2</h1>
         <hr>
         <div class="row">
             <div v-for="item in projects" class="col-4 mb-5">
                 <ProjectCard :project="item"></ProjectCard>
             </div>
-        </div>
+        </div> -->
 
 
 
