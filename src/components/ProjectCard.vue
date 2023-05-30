@@ -18,10 +18,10 @@ export default {
     computed: {
 
         shortContent() {
-            if (this.project.content.lenght > 40) {
-                return this.project.content.subsctring(0, 40) + '...';
+            if (this.project.content.length > 40) {
+                return this.project.content.substring(0, 40) + '...';
             } else {
-                return this.project.content.lenght;
+                return this.project.content;
             }
         },
 

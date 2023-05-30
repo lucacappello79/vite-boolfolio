@@ -34,17 +34,15 @@ export default {
 
         this.projects = response.data.results;
 
+
+        //here above .data
+
       });
 
     }
   },
 
 }
-
-
-
-
-
 
 </script>
 
