@@ -5,6 +5,7 @@ import AppAbout from './pages/AppAbout.vue';
 import ProjectsIndex from './pages/ProjectsIndex.vue'
 
 
+
 const router = createRouter({
 
     history: createWebHistory(),
