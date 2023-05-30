@@ -10,7 +10,7 @@ export default {
         return {
             projects: [],
 
-            // currentPage: 1,
+            currentPage: 1,
         }
     },
 
@@ -25,8 +25,8 @@ export default {
     methods: {
         getProjects() {
 
-            // axios.get('http://127.0.0.1:8000/api/projects?page=' + this.currentPage).then(response => {
-            axios.get('http://127.0.0.1:8000/api/projects').then(response => {
+            axios.get('http://127.0.0.1:8000/api/projects?page=' + this.currentPage).then(response => {
+                //axios.get('http://127.0.0.1:8000/api/projects').then(response => {
 
                 // this.projects = response.data.results;
                 this.projects = response.data.results.data;
@@ -44,18 +44,23 @@ export default {
     <div class="container py-5">
 
         <!-- <div v-if="projects.length > 0" class="container pt-5">
-            <h1>My Projects</h1>
+            <h1>My Projects2</h1>
             <hr>
             <div class="row">
                 <div v-for="item in projects" class="col-4 mb-5">
                     <ProjectCard :project="item"></ProjectCard>
                 </div>
             </div>
+        </div> -->
 
+        <!-- <div v-else class="loading-screen">
+            <div class="spinner-border" role="status">
+                <span class="visually-hidden">Loading...</span>
+            </div>
         </div> -->
 
 
-        <h1>My Projects</h1>
+        <h1>My Projects2</h1>
         <hr>
         <div class="row">
             <div v-for="item in projects" class="col-4 mb-5">
@@ -63,12 +68,8 @@ export default {
             </div>
         </div>
 
-        <!-- 
-        <div v-else class="loading-screen">
-            <div class="spinner-border" role="status">
-                <span class="visually-hidden">Loading...</span>
-            </div>
-        </div> -->
+
+
 
     </div>
 </template>

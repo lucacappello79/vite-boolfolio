@@ -29,7 +29,7 @@ export default {
                         </li>
 
                         <li class="nav-item">
-                            <router-link class="nav-link" :to="{ name: 'projectIndexPage' }">My Projects</router-link>
+                            <router-link class="nav-link" :to="{ name: 'projectsIndexPage' }">My Projects</router-link>
                         </li>
 
                         <li class="nav-item">
