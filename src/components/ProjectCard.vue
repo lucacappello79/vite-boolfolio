@@ -59,7 +59,13 @@ export default {
                     :style="{ backgroundColor: item.color }">{{ item.name }}</span>
             </div>
             <p class="card-text">{{ shortContent }}</p>
-            <a href="#" class="btn btn-primary">Link TBD</a>
+
+            <div class="text-centered">
+                <router-link :to="{ name: 'projects.show', params: { slug: project.slug } }"
+                    class="btn btn-outline-primary">View Project</router-link>
+                <!-- <a href="#" class="btn btn-primary">Link TBD</a> -->
+            </div>
+
         </div>
     </div>
 </template>
