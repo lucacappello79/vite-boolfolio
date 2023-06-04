@@ -77,10 +77,17 @@ export default {
 
     <div v-else class="container py-5">
         <div v-if="projectFound">
-            <div class="project-image text-centered">
+            <div class="project-image text-center pb-4">
                 <img :src="projectImage" alt="fnf">
             </div>
             <h1>{{ project.title }}</h1>
+
+            <div class="technologies py-3">
+                <span v-for="item in project.technologies" class="badge rounded-pill"
+                    :style="{ backgroundColor: item.color }">{{ item.name }}</span>
+            </div>
+
+            <h4 class="py-2">{{ project.type ? project.type.name : 'type undefined' }}</h4>
             <hr>
             <p>{{ project.content }}</p>
         </div>
@@ -113,6 +120,15 @@ export default {
         max-height: 400px;
         object-fit: cover;
 
+    }
+
+    .technologies {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        gap: 1em;
+        // overflow-x: scroll;
+        padding: 4px 2px;
     }
 
 }
